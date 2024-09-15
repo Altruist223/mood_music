@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Playlist</title>
+</head>
+<body>
+    <h1>Your Playlist</h1>
+    {% if playlist %}
+        <p>Mood: {{ playlist.mood.name }}</p>
+        <p>Playlist: <a href="{{ playlist.playlist_url }}" target="_blank">Listen Here</a></p>
+    {% else %}
+        <p>No playlist found for the selected mood.</p>
+    {% endif %}
+</body>
+</html>
